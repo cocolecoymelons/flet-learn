@@ -34,11 +34,11 @@ jobs:
           pip install flet pytz
 
       - name: Build APK
-        run: flet build apk -vv
+        run: flet build apk --image ./image.png -vv
        
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: flet-app-apk
+          name: APK-ANTI-BONCOS-apk
           path: build/apk/*.apk
 
