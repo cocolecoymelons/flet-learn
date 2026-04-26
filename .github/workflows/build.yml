@@ -1,0 +1,34 @@
+name: Build Flet APK
+on:
+  push:
+    branches: [ main ] # Jalankan setiap kali kamu push ke branch main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Install Flet and Dependencies
+        run: |
+          pip install flet
+          # Jika ada library lain, tambahkan di sini (misal: pip install requests)
+
+      - name: Build APK
+        run: flet build apk
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-app-apk
+          path: build/apk/*.apk
