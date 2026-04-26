@@ -34,7 +34,8 @@ jobs:
           pip install flet pytz
 
       - name: Build APK
-        run: flet build apk --target-platform android-arm64
+        run: flet build apk --android-arch arm64-v8a -vv
+
        
       - name: Upload APK
         uses: actions/upload-artifact@v4
