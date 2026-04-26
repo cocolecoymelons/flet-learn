@@ -1,4 +1,6 @@
 [tool.flet]
-app_name = "Anti Boncos"
-product_name = "Anti Boncos"
+app_title = "Anti Boncos"
+product = "Anti Boncos"
+org_domain = "com.antiboncos"
 icon = "image.png"
+android_arch = "arm64-v8a"
