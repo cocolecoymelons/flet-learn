@@ -1,7 +1,7 @@
 name: Build Flet APK
 on:
   push:
-    branches: [ main ] # Jalankan setiap kali kamu push ke branch main
+    branches: [ main ]
 
 jobs:
   build:
@@ -19,10 +19,9 @@ jobs:
         with:
           channel: 'stable'
 
-      - name: Install Flet and Dependencies
+      - name: Install Dependencies
         run: |
-          pip install flet
-          # Jika ada library lain, tambahkan di sini (misal: pip install requests)
+          pip install flet pytz
 
       - name: Build APK
         run: flet build apk
