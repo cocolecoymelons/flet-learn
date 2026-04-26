@@ -184,7 +184,10 @@ def main(page: ft.Page):
         page.add(
             ft.Column(
                 [
-                    ft.Row([kotak_nama, kotak_password], alignment=ft.MainAxisAlignment.CENTER),
+                    ft.Text("APK ANTI BONCOS!", size=30),
+                    ft.Text("Selamat datang!"),
+                    kotak_nama,
+                    kotak_password,
                     ft.Row([tombol, tombol_sign_in], alignment=ft.MainAxisAlignment.CENTER),
                     ft.Row([tombol_admin], alignment=ft.MainAxisAlignment.CENTER),
                     pesan,

@@ -1,0 +1,4 @@
+[tool.flet]
+app_name = "Anti Boncos"
+product_name = "Anti Boncos"
+icon = "image.png"
